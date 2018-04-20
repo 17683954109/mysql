@@ -1,0 +1,23 @@
+//php连接操作数据库(mysql) 面向过程
+
+<?php
+header('Content-Type:text/html;charset=utf-8');
+$host='localhost';      //数据库地址(名称)
+$user='root';           //账户名
+$password='root';       //密码
+$daname='SSY';          //连接的数据库名（database）
+$conn=mysqli_connect($host,$user,$password,$daname);      //如果是创建数据库则只需要(数据库地址,用户名,密码)
+if (!$conn) {
+	die('Connect failed:'.mysqli_connect_error());          //判断是否连接成功，die：连接失败的回调函数
+}
+$sql='INSERT INTO SSY(id,name,sex) VALUE(1235,"张三","女")';     /*向数据库输入的操作，向表格插入数据的语法:[
+insert into 数据表名(列表项1,列表项2,...) value(列表项1的值,列表项2的值,...)
+]
+*/
+if (mysqli_query($conn,$sql)) {                   //判断向数据传输命令是否成功
+	echo '数据表创建成功';
+}else{
+	echo 'Error creating database:'.mysqli_error($conn);      //操作失败的操作
+}
+mysqli_close($conn);                    //关闭数据库连接
+?>
