@@ -10,12 +10,13 @@ $conn=mysqli_connect($host,$user,$password,$daname);      //如果是创建数�
 if (!$conn) {
 	die('Connect failed:'.mysqli_connect_error());          //判断是否连接成功，die：连接失败的回调函数
 }
-$sql='INSERT INTO SSY(id,name,sex) VALUE(1235,"张三","女")';     /*向数据库输入的操作，向表格插入数据的语法:[
+$sql='INSERT INTO SSY(id,name,sex) VALUE(1235,"张三","女")';     /*向数据库输入的操作，向表格插入数据(记录)的语法[！！列表项的值(记录)必须与列表项相对应]:
+
 insert into 数据表名(列表项1,列表项2,...) value(列表项1的值,列表项2的值,...)
-]
+
 */
-if (mysqli_query($conn,$sql)) {                   //判断向数据传输命令是否成功
-	echo '数据表创建成功';
+if (mysqli_query($conn,$sql)) {                   //判断向数据传输的命令是否操作成功
+	echo '记录添加成功';
 }else{
 	echo 'Error creating database:'.mysqli_error($conn);      //操作失败的操作
 }
