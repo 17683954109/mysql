@@ -6,7 +6,7 @@ $host='localhost';      //数据库地址(名称)
 $user='root';           //账户名
 $password='root';       //密码
 $daname='SSY';          //连接的数据库名（database）
-$conn=mysqli_connect($host,$user,$password,$daname);      //如果是创建数据库则只需要(数据库地址,用户名,密码)
+$conn=mysqli_connect($host,$user,$password,$daname);      //如果是创建数据库则只需要(数据库地址,用户名,密码),//可以直接填入数据库信息，不用变量存储
 if (!$conn) {
 	die('Connect failed:'.mysqli_connect_error());          //判断是否连接成功，die：连接失败的回调函数
 }
