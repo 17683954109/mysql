@@ -1,0 +1,5 @@
+使用cd切换到MySQL的安装文件夹，使用mysql -hloaclhost -uroot -proot来进入数据库
+
+其中-h 为数据库地址（主机名）-u 用户名 -p 密码
+
+然后再命令行输入sql语句即可
