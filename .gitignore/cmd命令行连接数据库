@@ -1,6 +1,6 @@
 
 
-使用cd切换到MySQL的安装文件夹，使用mysql -hloaclhost -uroot -proot来进入数据库
+使用cd切换到MySQL的安装文件夹，使用mysql -hlocalhost -uroot -proot来进入数据库
 
 其中 -h数据库地址（主机名）-u用户名 -p密码
 
