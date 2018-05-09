@@ -19,5 +19,8 @@ delete from 表名 where 行数或表达式;
 //删除一个字段
 alter table 表名 drop column 字段名;
 
+//刪除一張表
+drop table 表名;
+
 //删除一个数据库
 drop database 数据库名;
