@@ -24,3 +24,6 @@ drop table 表名;
 
 //删除一个数据库
 drop database 数据库名;
+
+
+
