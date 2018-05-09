@@ -1,0 +1,58 @@
+
+
+
+
+//最简单的查询语句：
+
+select * from 表名;
+
+//select 后面就是字段(列名)或者表达式
+
+select username from user;
+
+//也可以跟特定的一些函数表达式:
+
+count() 计数 || max() 最大值 || min() 最小值
+
+//where子句，用于设定查询条件,通常跟算术运算符配合使用
+
+select * from user where id > 3;
+
+//group by 子句，用于对前面的结果进行分类,后面可以跟字段或特定的表达式
+
+select * from user group by sex;
+
+//order by 子句,用于对查询到的结果进行排序,可以是字段或特定表达式
+
+asc 正序排列，由小到大 ||desc 倒序排列，由大到小
+
+select * from user order by id desc;
+
+//having 和where用途基本一样
+
+//limit m,n 显示多少条数据
+
+limit 从第几条数据开始,要显示的条数
+
+//多表查询：on 作为多表的条件
+
+join || inner join ||left join ||right join
+
+join和inner join基本一样
+
+select * from user (inner) join school on user.id=school.user_id;
+
+/////\\\\\
+
+left join不管on的条件成不成立，都会将第一个表的数据显示完
+
+\\\\\/////
+
+/////\\\\\
+
+right join 不管on的条件成不成立，都会将第二个表的数据显示完
+
+\\\\\/////
+
+
+
