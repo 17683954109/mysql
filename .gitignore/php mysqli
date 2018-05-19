@@ -1,0 +1,16 @@
+
+
+//php mysqli扩展，旧式的mysql连接数据库已经不太受到支持
+
+连接：
+$mydb=mysqli_connect(host,user,password,dbname);  //mysqli扩展可以在连接的时候选择要连接的数据库
+$sql='select * from tbname';
+$rs=mysqli_query($mydb,$sql);
+从结果集中取出一行数据：
+mysqli_fetch_row($rs)
+
+------------------------------------------------
+mysqli_affected_rows($rs);  //sql语句影响的行数
+
+------------------------------------------------
+mysqli_close($mydb);   //关闭数据库连接
